@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.carousel-banner{
+    height: 50vh;
+}
+
+#main-block-fluid{
+    background-color: #d9ffe3;
+}
+.card .card-body{
+    height: 35vh;
+}
+
+a{
+    color: #0063d3;
+    text-decoration: none;
+}
+
