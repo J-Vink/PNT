@@ -17,10 +17,10 @@
                         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                     {% endif %}
                     <img class="w-25 mx-auto d-block" src="{{ asset('images/logo.jpg') }}" alt="logo">
-                    <h4 class="text-center font-weight-normal">Sign in to Training Factory</h4>
+                    <h4 class="text-center font-weight-normal">Sign in to Fixed Productions</h4>
                     <div class="card">
                         <div class="card-body">
-                            <label for="inputUsername">Username</label>
+                            <label for="inputUsername">Email</label>
                             <input type="text" value="{{ last_username }}" name="username" id="inputUsername"
                                    class="form-control" required autofocus>
                             <label for="inputPassword">Password</label>
@@ -41,8 +41,7 @@
                 </form>
                 <div class="card">
                     <div class="card-body">
-                        <p class="text-center">Nieuw bij Training Factory? <a href="{{ path('app_register') }}">Maak een
-                                account.</a></p>
+                        <p class="text-center">New tp Fixed Productions? <a href="{{ path('app_register') }}">Sign up</a></p>
                     </div>
                 </div>
             </div>
