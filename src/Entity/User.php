@@ -35,6 +35,26 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $familyName;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $passcode;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $balance;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,8 +88,6 @@ class User implements UserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
@@ -111,5 +129,53 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): self
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    public function getFamilyName(): ?string
+    {
+        return $this->familyName;
+    }
+
+    public function setFamilyName(string $familyName): self
+    {
+        $this->familyName = $familyName;
+
+        return $this;
+    }
+
+    public function getPasscode(): ?int
+    {
+        return $this->passcode;
+    }
+
+    public function setPasscode(?int $passcode): self
+    {
+        $this->passcode = $passcode;
+
+        return $this;
+    }
+
+    public function getBalance(): ?float
+    {
+        return $this->balance;
+    }
+
+    public function setBalance(float $balance): self
+    {
+        $this->balance = $balance;
+
+        return $this;
     }
 }

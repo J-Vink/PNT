@@ -1,0 +1,9 @@
+{% extends 'h-f-component.html.twig' %}
+
+{% block main %}
+    {{ parent() }}
+    <div class="container">
+            <h3>Hello {{ app.user.firstName }}</h3>
+            Your balance is: {{ app.user.balance }}
+    </div>
+{% endblock %}
