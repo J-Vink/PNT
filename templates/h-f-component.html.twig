@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-
-
 {% block header %}
     <div class="container-fluid bg-light">
         <div class="row p-0 sticky-top">
@@ -22,33 +20,13 @@
                                     </li>
                                 {% endfor %}
                             {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{ path('app_login') }}">Login</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
-
             </div>
-            {#            <div class="container p-0">#}
-            {#                <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">#}
-            {#                    <button class="navbar-toggler" type="button" data-toggle="collapse"#}
-            {#                            data-target="#navbarSupportedContent"#}
-            {#                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
-            {#                        <span class="navbar-toggler-icon"></span>#}
-            {#                    </button>#}
-            {#                    <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-            {#                        <ul class="navbar-nav mr-auto">#}
-            {#                            {% if links is defined %}#}
-            {#                                {% for link in links %}#}
-            {#                                    <li class="nav-item">#}
-            {#                                        <a class="nav-link {{ app.request.get('_route') == link.path ? 'active, font-weight-bold' : 'text-secondary' }}"#}
-            {#                                           href="{{ path(link.path) }}">{{ link.name }}</a>#}
-            {#                                    </li>#}
-            {#                                {% endfor %}#}
-            {#                            {% endif %}#}
-            {#                        </ul>#}
-            {#                    </div>#}
-            {#                </nav>#}
-            {#            </div>#}
-
         </div>
         <div class="row">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="">
@@ -59,28 +37,28 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 carousel-banner" src="{{ asset('images/index-banner.jpg') }}"
+                        <img class="d-block w-100 carousel-banner" src="{{ asset('images/index-banner-1.jpg') }}"
                              alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 id="ptwn-start-text"></h5>
-                            <p>quote</p>
+                            <p>Best train ride I've ever been on</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 carousel-banner" src="{{ asset('images/index-banner.jpg') }}"
+                        <img class="d-block w-100 carousel-banner" src="{{ asset('images/index-banner-1.jpg') }}"
                              alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Public Transportation With NFC</h5>
-                            <p>quote</p>
+                            <p>The future of public transportation</p>
 
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 carousel-banner" src="{{ asset('images/index-banner.jpg') }}"
+                        <img class="d-block w-100 carousel-banner" src="{{ asset('images/index-banner-1.jpg') }}"
                              alt="Third slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Public Transportation With NFC</h5>
-                            <p>quote</p>
+                            <p>Very comfortable trip were you can have a great ride with a eco-friendly vehicle</p>
                         </div>
                     </div>
                 </div>
@@ -100,9 +78,6 @@
             {% block main %}{% endblock %}
         </div>
     </div>
-
-
-
 {% endblock %}
 
 {% block footer %}
@@ -127,6 +102,7 @@
                     }, 100);
                 }
             }
+
             typeWriter(tekst, 1);
         });
     </script>
